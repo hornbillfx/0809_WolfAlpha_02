@@ -411,7 +411,7 @@ public class PM : MonoBehaviour
 
         //res = Physics2D.OverlapCircleAll(wallCheckPoint.transform.position, wallCheckRadius, WallLayer);
         
-        res = Physics2D.OverlapBoxAll(wallCheckPoint.position, new Vector2(wallCheckRadius, .5f), wallCheckRadius, WallLayer);
+        res = Physics2D.OverlapBoxAll(wallCheckPoint.position, new Vector2(wallCheckRadius, 2f), wallCheckRadius, WallLayer);
 
         if (GetComponent<cc>().m_Grounded == false && res.Length == 0)
         {
@@ -670,6 +670,6 @@ public class PM : MonoBehaviour
     public void OnDrawGizmos()
     {
         //Gizmos.DrawSphere(wallCheckPoint.position, wallCheckRadius);
-        Gizmos.DrawWireCube(wallCheckPoint.position, new Vector3(wallCheckRadius, .15f, 0));
+        Gizmos.DrawWireCube(wallCheckPoint.position, new Vector3(wallCheckRadius, 2f, 3));
     }
 }

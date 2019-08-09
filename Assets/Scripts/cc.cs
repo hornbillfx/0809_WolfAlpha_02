@@ -81,7 +81,7 @@ public class cc : MonoBehaviour
         // This can be done using layers instead but Sample Assets will not overwrite your project settings.
         //Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         //Collider2D[] colliders = Physics2D.RaycastAll(m_GroundCheck.position, Vector2.down, k_GroundedRadius, m_WhatIsGround);
-        colliders = Physics2D.OverlapBoxAll(m_GroundCheck.position, new Vector2(.3f, 1), k_GroundedRadius, m_WhatIsGround);
+        colliders = Physics2D.OverlapBoxAll(m_GroundCheck.position, new Vector2(1f, 1), k_GroundedRadius, m_WhatIsGround);
 
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -245,6 +245,6 @@ public class cc : MonoBehaviour
     {
         //Gizmos.DrawCube(m_GroundCheck.position, new Vector3(1f, 1, 0));
 
-        Gizmos.DrawWireCube(m_GroundCheck.position, new Vector3(.3f, 1, 0));
+        Gizmos.DrawWireCube(m_GroundCheck.position, new Vector3(1f, 1, 0));
     }
 }

@@ -90,7 +90,7 @@ public class CharacterController2D : MonoBehaviour
 
         // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
         // This can be done using layers instead but Sample Assets will not overwrite your project settings.
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(m_GroundCheck.position, new Vector2(.3f, 1), k_GroundedRadius, m_WhatIsGround);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(m_GroundCheck.position, new Vector2(GroundCheckWi, GroundCheckHi), k_GroundedRadius, m_WhatIsGround);
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].gameObject != gameObject)
@@ -105,7 +105,8 @@ public class CharacterController2D : MonoBehaviour
 
     public float fallmult=200.5f;
     public float lowMult = 2f;
-    
+    [SerializeField] private float GroundCheckWi, GroundCheckHi;
+
     public void Move(float move, bool crouch, bool jump)
     {
         
@@ -227,5 +228,12 @@ public class CharacterController2D : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    public void OnDrawGizmos()
+    {
+        //Gizmos.DrawCube(m_GroundCheck.position, new Vector3(1f, 1, 0));
+
+        Gizmos.DrawWireCube(m_GroundCheck.position, new Vector3(GroundCheckWi, GroundCheckHi, 0));
     }
 }

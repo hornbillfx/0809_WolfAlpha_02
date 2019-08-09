@@ -346,7 +346,7 @@ public class PlayerMovement : MonoBehaviourPun,IPunObservable
         if(pv.IsMine)
         {
       //res = Physics2D.OverlapCircleAll(wallCheckPoint.transform.position, 0.15f, WallLayer);
-            res = Physics2D.OverlapBoxAll(wallCheckPoint.position, new Vector2(0.15f, 3f), 0.15f, WallLayer);
+            res = Physics2D.OverlapBoxAll(wallCheckPoint.position, new Vector2(wallCheckWi, wallCheckHi), 0.15f, WallLayer);
 
 
             if (GetComponent<CharacterController2D>().m_Grounded == false && res.Length == 0)
@@ -642,7 +642,8 @@ public class PlayerMovement : MonoBehaviourPun,IPunObservable
         winpos = transform.position;
     }
     public Vector3 winpos;
-  
+    [SerializeField] private float wallCheckWi, wallCheckHi;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -710,5 +711,11 @@ public class PlayerMovement : MonoBehaviourPun,IPunObservable
         {
            movement= (Vector3)stream.ReceiveNext();
         }
+    }
+
+    public void OnDrawGizmos()
+    {
+        //Gizmos.DrawSphere(wallCheckPoint.position, wallCheckRadius);
+        Gizmos.DrawWireCube(wallCheckPoint.position, new Vector3(wallCheckWi, wallCheckHi, 0));
     }
 }
