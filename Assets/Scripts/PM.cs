@@ -60,7 +60,7 @@ public class PM : MonoBehaviour
     {
         FrontCheckOffset = this.transform.position - frontCheck.transform.position;
         BackCheckOffset = this.transform.position - BackCheck.transform.position;
-        //  PlayerPrefs.DeleteAll();
+        // PlayerPrefs.DeleteAll();
         if (PlayerPrefs.GetFloat("BaseSpeed") == 0.0f)
         {
             PlayerPrefs.SetFloat("BaseSpeed", 40f);

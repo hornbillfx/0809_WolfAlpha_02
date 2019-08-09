@@ -182,7 +182,7 @@ public class UIHandler : MonoBehaviourPunCallbacks
     }
     public void TowardsLobby()
     {
-        //  PhotonNetwork.LeaveRoom();
+          PhotonNetwork.LeaveRoom();
         Destroy(GameObject.Find("AudioCtrl").gameObject);
       //  Destroy(GameObject.Find("AudioCtrl").gameObject);
 
