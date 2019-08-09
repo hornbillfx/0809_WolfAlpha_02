@@ -60,12 +60,12 @@ public class PM : MonoBehaviour
     {
         FrontCheckOffset = this.transform.position - frontCheck.transform.position;
         BackCheckOffset = this.transform.position - BackCheck.transform.position;
-        // PlayerPrefs.DeleteAll();
+         //PlayerPrefs.DeleteAll();
         if (PlayerPrefs.GetFloat("BaseSpeed") == 0.0f)
         {
-            PlayerPrefs.SetFloat("BaseSpeed", 40f);
-            BaseSpeedtxt.text = "40";
-            controldata.BaseSpeed = 40;
+            PlayerPrefs.SetFloat("BaseSpeed", 30f);
+            BaseSpeedtxt.text = "30";
+            controldata.BaseSpeed = 30;
         }
         else
         {
@@ -78,9 +78,9 @@ public class PM : MonoBehaviour
 
         if (PlayerPrefs.GetFloat("TargetSpeed") == 0.0f)
         {
-            PlayerPrefs.SetFloat("TargetSpeed", 75f);
-            TargetSpeedTxt.text = "75";
-            controldata.TargetSpeed = 75;
+            PlayerPrefs.SetFloat("TargetSpeed", 60f);
+            TargetSpeedTxt.text = "60";
+            controldata.TargetSpeed = 60;
 
         }
         else
