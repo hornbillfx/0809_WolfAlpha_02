@@ -111,13 +111,21 @@ public class PlayerMovement : MonoBehaviourPun,IPunObservable
         UI = GameObject.Find("Launcher").GetComponent<UIHandler>();
 
         Ac.GetComponent<AudioSource>().Stop();
+        if (Manager.manage.UI.EnteredFirst)
+        {
+            manage.startBtn.gameObject.SetActive(true);
+        }
 
-        manage.PlayerReady.gameObject.SetActive(true);
+        if (!Manager.manage.UI.EnteredFirst)
+        {
+            manage.PlayerReady.gameObject.SetActive(true);
+        }
+
         //  Debug.LogError(manage.totalPlayer.Count);
         //Debug.LogError(manage.startCount+"startcount");
         Debug.LogError(PhotonNetwork.CountOfPlayersInRooms);
         yield return new WaitForSeconds(0.5f);
-        while (manage.startCount != UI.PlayerCount && manage.StartSec != 0) 
+        while (manage.startCount !=1 && manage.StartSec != 0) 
         {
             yield return null;
         }

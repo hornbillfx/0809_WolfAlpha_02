@@ -5689,11 +5689,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test track - 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3007700585456137942, guid: 74a27fb78da37e148a8cebde6042f179,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3007700585456137940, guid: 74a27fb78da37e148a8cebde6042f179,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5748,46 +5743,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 118143191, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 221008963, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 373788065, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 565446886, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 645073951, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 763959552, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 847818915, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1101847824, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1452387558, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1716811892, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74a27fb78da37e148a8cebde6042f179, type: 3}
@@ -45950,7 +45905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1155156771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49965,6 +49920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896214573137495976, guid: ca7556cca2f124edcacf539fbb8af558,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2896214573137495977, guid: ca7556cca2f124edcacf539fbb8af558,
         type: 3}
@@ -57469,6 +57429,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 967448918, guid: ee94b4641bd6c8244a266fe44862861c, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 93990283, guid: ee94b4641bd6c8244a266fe44862861c, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -57691,10 +57655,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.x
       value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 967448918, guid: ee94b4641bd6c8244a266fe44862861c, type: 3}
-      propertyPath: m_RootOrder
-      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee94b4641bd6c8244a266fe44862861c, type: 3}
